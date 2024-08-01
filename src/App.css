@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* *********************************************************************************************************** */
+
+/* Poppins-Regular */
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../public/font/Roboto-Regular.ttf");
+  font-weight: 400;
+}
+
+* {
+  transition: all 0.1s;
+}
+
+/* span {
+  display: block;
+} */
+
+html {
+  @apply text-base max-[768px]:text-xs;
+}
+
+main {
+  overflow: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* *********************************************************************************************************** */
+
+.sp-sidebar-menu {
+  @apply flex items-center justify-between space-x-3 max-[768px]:block max-[768px]:absolute max-[768px]:bg-[#2e4542] max-[768px]:text-white max-[768px]:w-3/4 max-[768px]:h-screen max-[768px]:space-x-0 max-[768px]:top-full;
+}
+
+.sp-links-header {
+  @apply cursor-pointer font-bold border-transparent hover:border-b-2 hover:text-[#fcc695] hover:border-[#fcc695] pb-1 max-[768px]:hover:border-b-8 max-[768px]:p-4 max-[768px]:max-w-xs max-[768px]:block max-[768px]:mx-auto max-[768px]:rounded-md;
+}
+
+/* start in hero section */
+
+/* to make every section padding top and bottom the same style */
+/* section:not(.sp-hero) {
+  @apply py-24;
+} */
+
+/* to make every container margin left and right auto */
+.container {
+  @apply mx-auto;
+}
+
+.sp-hero {
+  height: calc(100vh - 64px);
+  margin-top: 64px;
+
+  @media (max-width: 768px) {
+    height: calc(100vh - 48px);
+    margin-top: 48px;
+  }
+}
+
+.sp-title-header-page {
+  height: calc(320px - 64px);
+  margin-top: 64px;
+
+  @media (max-width: 768px) {
+    height: calc(320px - 48px);
+    margin-top: 48px;
+  }
+}
+
+.sp-layout {
+  @apply absolute w-full h-full -z-10 before:bg-[#0000005e] before:absolute before:w-full before:h-full;
+}
+
+/* end in hero section */
+
+/* *********************************************************************************************************** */
+
+/* to change navbar link with using NavLink */
+.active {
+  color: #fcc695;
+}
+
+/* ever btn contact us */
+.btn-green {
+  @apply bg-[#2e4542] hover:scale-110 block w-fit rounded-md py-2 px-4 text-white;
+}
+
+/* title with image in pages */
+.title-page {
+}
+
+.sp-img-bg::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 115%;
+  z-index: -1;
+  background-color: #fcc695;
+  top: -40px;
+  left: -40px;
+}
+
+@media (max-width: 768px) {
+  .sp-img-bg::before {
+    /* left: 0px; */
+    background-color: transparent;
+  }
+}
+
+/* slider img */
+
+.gallery-thumb {
+  padding: 10px;
+
+  img {
+    border-radius: 12px;
+  }
+}
+/* ***************************************************************************************************************** */
+/* .each-slide-effect > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 350px;
+} */
